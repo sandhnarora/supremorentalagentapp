@@ -35,7 +35,7 @@ function ConfirmBooking() {
       fetch(`${process.env.REACT_APP_BACKEND_SERVICE_IP}/car-service-redis/cars/${id}`)
         .then((response) => response.json())
         .then((data) => {
-          
+          // console.log("from http://146.56.171.43:8081 ", id);
           setBackendData(data);
         })
         .catch((err) => {
@@ -47,7 +47,7 @@ function ConfirmBooking() {
       fetch(`${process.env.REACT_APP_BACKEND_SERVICE_IP}/user-service-redis/users/${getUserId}`)
           .then((response) => response.json())
           .then((data) => {
-            
+            // console.log("from http://146.56.171.43:8081 ", id);
             setUserData(data);
           })
           .catch((err) => {

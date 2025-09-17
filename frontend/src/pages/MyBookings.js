@@ -69,7 +69,7 @@ function MyBookings({ onLogout, userJsonVal, bookingCount }) {
     )
       .then((response) => response.json())
       .then((data) => {
-        
+        // console.log("from http://146.56.171.43:8081 ", id);
         setUserData(data);
       })
       .catch((err) => {

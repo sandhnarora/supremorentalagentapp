@@ -86,7 +86,7 @@ app.get("/order-service/user-orders", async (req, res) => {
       method: 'get',
       maxBodyLength: Infinity,
       // url: process.env.CARSRENTAL_GETALL_HOST+'/order-service/orders?userid=JohnC',
-      url: "<<config rest api host ip or name >>/order-service/orders?userid=JohnC",
+      url: "http://152.67.25.167/order-service/orders?userid=JohnC",
       headers: { }
     };
     
@@ -157,7 +157,7 @@ app.post("/user-service-redis/authn", async (req, res) => {
   let config = {
     method: 'post',
     maxBodyLength: Infinity,
-    url: '<<config rest api host ip or name >>/user-service-redis/authn',
+    url: 'http://152.67.25.167user-service-redis/authn',
     headers: { 
       'Content-Type': 'application/json'
     },
@@ -191,7 +191,7 @@ app.get("/user-service-redis/users/:userid", async (req, res) => {
   let config = {
     method: 'get',
     maxBodyLength: Infinity,
-    url: `<<config rest api host ip or name >>/user-service-redis/users/${userID}`,
+    url: `http://152.67.25.167/user-service-redis/users/${userID}`,
     headers: { }
   };
   
@@ -217,7 +217,7 @@ app.post("/askme-search", async (req, res) => {
   let config = {
     method: 'POST',
     maxBodyLength: Infinity,
-    url: '<<config opensearch api host ip or name >>/opensearch/my_index/_search',
+    url: 'http://152.67.25.167/opensearch/my_index/_search',
     headers: { 
       'Content-Type': 'application/json', 
       'Authorization': 'basic auth '
